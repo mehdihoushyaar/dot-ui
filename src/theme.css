@@ -1,15 +1,76 @@
 /* src/theme.css */
 /* This is exported to consumers to import via CSS */
 @theme {
-  /* Hardcoded Neutral, Success, Warning colors from Figma */
+  /* Brand Colors (Consumers can override these) */
+  --color-brand-main: #0052CC;
+  --color-brand-light: #DEEBFF;
+  --color-brand-dark: #0747A6;
+  --color-brand-hover: #0065FF;
+
+  /* Primary Colors */
+  --color-primary-main: #0F172A;
+  --color-primary-light: #F1F5F9;
+  --color-primary-dark: #020617;
+  --color-primary-hover: #1E293B;
+
+  /* Error / Danger Colors */
+  --color-error-main: #DE350B;
+  --color-error-light: #FFEBE6;
+  --color-error-dark: #BF2600;
+  --color-error-hover: #E54922;
+
+  /* Hardcoded Neutral, Success, Warning colors */
+  --color-neutral-50: #FAFAFA;
   --color-neutral-100: #F5F5F5;
+  --color-neutral-200: #EEEEEE;
+  --color-neutral-300: #E0E0E0;
+  --color-neutral-400: #BDBDBD;
   --color-neutral-500: #9E9E9E;
+  --color-neutral-600: #757575;
+  --color-neutral-700: #616161;
+  --color-neutral-800: #424242;
   --color-neutral-900: #212121;
   
   --color-success-main: #36B37E;
   --color-warning-main: #FFAB00;
 
-  /* Typography Sizes */
+  /* Border Radiuses */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-xxl: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+  /* Button Typography */
+  --text-btn-sm: 12px;
+  --text-btn-sm--line-height: 16px;
+  --text-btn-sm--letter-spacing: -0.01em;
+
+  --text-btn-md: 14px;
+  --text-btn-md--line-height: 20px;
+  --text-btn-md--letter-spacing: -0.01em;
+
+  --text-btn-lg: 16px;
+  --text-btn-lg--line-height: 24px;
+  --text-btn-lg--letter-spacing: -0.01em;
+
+  --text-btn-xl: 18px;
+  --text-btn-xl--line-height: 26px;
+  --text-btn-xl--letter-spacing: -0.01em;
+
+  --text-btn-xxl: 20px;
+  --text-btn-xxl--line-height: 28px;
+  --text-btn-xxl--letter-spacing: -0.01em;
+
+  /* Display Typography Sizes */
   --text-md: 36px;
   --text-md--line-height: 44px;
   --text-md--letter-spacing: -0.02em;
