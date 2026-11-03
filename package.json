@@ -1,17 +1,25 @@
 {
   "name": "my-ui-kit",
   "version": "1.0.0",
-  "description": "Tailwind v4 React UI Kit",
+  "description": "Tailwind v4 React UI Kit - DotOne Design System",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/theme.css",
+    "src/brands.css"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
-    "./theme.css": "./src/theme.css"
+    "./theme.css": "./dist/theme.css",
+    "./src/theme.css": "./src/theme.css",
+    "./brands.css": "./dist/brands.css",
+    "./src/brands.css": "./src/brands.css"
   },
   "scripts": {
     "build": "tsup",

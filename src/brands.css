@@ -1,0 +1,123 @@
+/* src/brands.css */
+/* DotOne (دیزاین سیستم دات وان) Sub-Brand Presets */
+
+/* تریپ (Trip) - Default */
+[data-brand="trip"] {
+  --color-brand-50: #E5FCFF;
+  --color-brand-100: #CCFAFF;
+  --color-brand-200: #99F5FF;
+  --color-brand-300: #66F0FF;
+  --color-brand-400: #33EBFF;
+  --color-brand-500: #00E5FF;
+  --color-brand-600: #00BBCC;
+  --color-brand-700: #008A99;
+  --color-brand-800: #005C66;
+  --color-brand-900: #002E33;
+  --color-brand-950: #002024;
+}
+
+/* گلد (Gold) */
+[data-brand="gold"] {
+  --color-brand-50: #FAF6EB;
+  --color-brand-100: #F5ECD5;
+  --color-brand-200: #EAD9AE;
+  --color-brand-300: #EDC685;
+  --color-brand-400: #DBB35D;
+  --color-brand-500: #CBA034;
+  --color-brand-600: #A2822A;
+  --color-brand-700: #7A601F;
+  --color-brand-800: #514015;
+  --color-brand-900: #29200A;
+  --color-brand-950: #1C1607;
+}
+
+/* سوپراپ (SuperApp) */
+[data-brand="superapp"] {
+  --color-brand-50: #F3F1F2;
+  --color-brand-100: #E7E4E5;
+  --color-brand-200: #CFC9CA;
+  --color-brand-300: #B7AEB0;
+  --color-brand-400: #9F9396;
+  --color-brand-500: #87787C;
+  --color-brand-600: #6C6063;
+  --color-brand-700: #51484A;
+  --color-brand-800: #363031;
+  --color-brand-900: #1B1819;
+  --color-brand-950: #131111;
+}
+
+/* سل (Sell) */
+[data-brand="sell"] {
+  --color-brand-50: #FEF4EE;
+  --color-brand-100: #FDE6D7;
+  --color-brand-200: #FBC9AD;
+  --color-brand-300: #F7A47A;
+  --color-brand-400: #F37444;
+  --color-brand-500: #F05323;
+  --color-brand-600: #E13715;
+  --color-brand-700: #BB2613;
+  --color-brand-800: #942118;
+  --color-brand-900: #781E16;
+  --color-brand-950: #400A0A;
+}
+
+/* مدیا (Media) */
+[data-brand="media"] {
+  --color-brand-50: #FDE7EC;
+  --color-brand-100: #FCCFD8;
+  --color-brand-200: #F99FB1;
+  --color-brand-300: #F66F8A;
+  --color-brand-400: #F33F63;
+  --color-brand-500: #F00F3C;
+  --color-brand-600: #C00C30;
+  --color-brand-700: #900924;
+  --color-brand-800: #600618;
+  --color-brand-900: #30030C;
+  --color-brand-950: #220208;
+}
+
+/* لجستیک (Logistics) */
+[data-brand="logistics"] {
+  --color-brand-50: #E5FCEF;
+  --color-brand-100: #D2F9E0;
+  --color-brand-200: #A5F3C0;
+  --color-brand-300: #78EDA1;
+  --color-brand-400: #4BE782;
+  --color-brand-500: #1FE062;
+  --color-brand-600: #18B44F;
+  --color-brand-700: #12873B;
+  --color-brand-800: #0C5A27;
+  --color-brand-900: #062D14;
+  --color-brand-950: #041F0E;
+}
+
+/* تریدینگ (Trading) */
+[data-brand="trading"] {
+  --color-brand-50: #ECEFF4;
+  --color-brand-100: #D9DFE9;
+  --color-brand-200: #B3BFD3;
+  --color-brand-300: #8D9FBD;
+  --color-brand-400: #677FA7;
+  --color-brand-500: #415F91;
+  --color-brand-600: #344C74;
+  --color-brand-700: #273957;
+  --color-brand-800: #1A263A;
+  --color-brand-900: #0D131D;
+  --color-brand-950: #090D14;
+}
+
+/* سیستمز (Systems) */
+[data-brand="systems"] {
+  --color-brand-50: #F9FBE9;
+  --color-brand-100: #F4F8D3;
+  --color-brand-200: #E9F0A8;
+  --color-brand-300: #DEE97C;
+  --color-brand-400: #D3E151;
+  --color-brand-500: #C8DA25;
+  --color-brand-600: #A0AE1E;
+  --color-brand-700: #788316;
+  --color-brand-800: #50570F;
+  --color-brand-900: #282C07;
+  --color-brand-950: #1C1F05;
+}
+

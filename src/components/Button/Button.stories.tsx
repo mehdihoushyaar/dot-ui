@@ -35,17 +35,17 @@ const meta: Meta<typeof Button> = {
     buttonType: {
       control: 'select',
       options: ['primary', 'brand', 'error', 'neutral'],
-      description: 'Button color / intent type',
+      description: 'DotOne button type: primary (neutral/900), brand (brand/600), error (error/600), neutral',
     },
     buttonStyle: {
       control: 'select',
       options: ['fill', 'border', 'link'],
-      description: 'Button visual style',
+      description: 'Button visual style: fill, border, link',
     },
     size: {
       control: 'select',
       options: ['sm', 'md', 'lg', 'xl', 'xxl'],
-      description: 'Button sizing',
+      description: 'Button sizing: sm (24px), md (32px), lg (40px), xl (48px), xxl (56px)',
     },
     state: {
       control: 'select',
@@ -55,8 +55,9 @@ const meta: Meta<typeof Button> = {
     disabled: {
       control: 'boolean',
     },
-    onlyIcon: {
+    justIcon: {
       control: 'boolean',
+      description: 'Square icon-only button per DotOne specification',
     },
   },
 };
@@ -92,25 +93,25 @@ export const AllStyles: Story = {
   render: () => (
     <div className="flex flex-col gap-6">
       <div className="flex flex-wrap gap-4 items-center">
-        <span className="w-20 font-bold text-sm text-neutral-500">Brand:</span>
+        <span className="w-24 shrink-0 font-bold text-sm text-neutral-500">Brand:</span>
         <Button buttonType="brand" buttonStyle="fill">Fill</Button>
         <Button buttonType="brand" buttonStyle="border">Border</Button>
         <Button buttonType="brand" buttonStyle="link">Link</Button>
       </div>
       <div className="flex flex-wrap gap-4 items-center">
-        <span className="w-20 font-bold text-sm text-neutral-500">Primary:</span>
+        <span className="w-24 shrink-0 font-bold text-sm text-neutral-500">Primary:</span>
         <Button buttonType="primary" buttonStyle="fill">Fill</Button>
         <Button buttonType="primary" buttonStyle="border">Border</Button>
         <Button buttonType="primary" buttonStyle="link">Link</Button>
       </div>
       <div className="flex flex-wrap gap-4 items-center">
-        <span className="w-20 font-bold text-sm text-neutral-500">Error:</span>
+        <span className="w-24 shrink-0 font-bold text-sm text-neutral-500">Error:</span>
         <Button buttonType="error" buttonStyle="fill">Fill</Button>
         <Button buttonType="error" buttonStyle="border">Border</Button>
         <Button buttonType="error" buttonStyle="link">Link</Button>
       </div>
       <div className="flex flex-wrap gap-4 items-center">
-        <span className="w-20 font-bold text-sm text-neutral-500">Neutral:</span>
+        <span className="w-24 shrink-0 font-bold text-sm text-neutral-500">Neutral:</span>
         <Button buttonType="neutral" buttonStyle="fill">Fill</Button>
         <Button buttonType="neutral" buttonStyle="border">Border</Button>
         <Button buttonType="neutral" buttonStyle="link">Link</Button>
@@ -123,11 +124,11 @@ export const AllStyles: Story = {
 export const AllSizes: Story = {
   render: () => (
     <div className="flex flex-wrap items-center gap-4">
-      <Button buttonType="brand" size="xxl">Size XXL (64px)</Button>
-      <Button buttonType="brand" size="xl">Size XL (56px)</Button>
-      <Button buttonType="brand" size="lg">Size LG (48px)</Button>
-      <Button buttonType="brand" size="md">Size MD (40px)</Button>
-      <Button buttonType="brand" size="sm">Size SM (32px)</Button>
+      <Button buttonType="brand" size="xxl">Size XXL (56px)</Button>
+      <Button buttonType="brand" size="xl">Size XL (48px)</Button>
+      <Button buttonType="brand" size="lg">Size LG (40px)</Button>
+      <Button buttonType="brand" size="md">Size MD (32px)</Button>
+      <Button buttonType="brand" size="sm">Size SM (24px)</Button>
     </div>
   ),
 };
@@ -136,7 +137,7 @@ export const AllSizes: Story = {
 export const AllStates: Story = {
   render: () => (
     <div className="flex flex-col gap-6">
-      <h4 className="font-semibold text-neutral-700">Simulated / Fixed States:</h4>
+      <h4 className="font-semibold text-neutral-700">Brand Button States:</h4>
       <div className="flex flex-wrap gap-4 items-center">
         <Button buttonType="brand" state="default">Default</Button>
         <Button buttonType="brand" state="hover">Hover</Button>
@@ -144,24 +145,56 @@ export const AllStates: Story = {
         <Button buttonType="brand" state="focus">Focus</Button>
         <Button buttonType="brand" state="disabled">Disabled</Button>
       </div>
-      <h4 className="font-semibold text-neutral-700 mt-4">Border Style States:</h4>
+
+      <h4 className="font-semibold text-neutral-700 mt-4">Primary Button States:</h4>
       <div className="flex flex-wrap gap-4 items-center">
-        <Button buttonType="brand" buttonStyle="border" state="default">Default</Button>
-        <Button buttonType="brand" buttonStyle="border" state="hover">Hover</Button>
-        <Button buttonType="brand" buttonStyle="border" state="clicked">Clicked</Button>
-        <Button buttonType="brand" buttonStyle="border" state="focus">Focus</Button>
-        <Button buttonType="brand" buttonStyle="border" state="disabled">Disabled</Button>
+        <Button buttonType="primary" state="default">Default</Button>
+        <Button buttonType="primary" state="hover">Hover</Button>
+        <Button buttonType="primary" state="clicked">Clicked</Button>
+        <Button buttonType="primary" state="focus">Focus</Button>
+        <Button buttonType="primary" state="disabled">Disabled</Button>
       </div>
-      <h4 className="font-semibold text-neutral-700 mt-4">Link Style States:</h4>
+
+      <h4 className="font-semibold text-neutral-700 mt-4">Error (Destructive) Button States:</h4>
       <div className="flex flex-wrap gap-4 items-center">
-        <Button buttonType="brand" buttonStyle="link" state="default">Default</Button>
-        <Button buttonType="brand" buttonStyle="link" state="hover">Hover</Button>
-        <Button buttonType="brand" buttonStyle="link" state="clicked">Clicked</Button>
-        <Button buttonType="brand" buttonStyle="link" state="focus">Focus</Button>
-        <Button buttonType="brand" buttonStyle="link" state="disabled">Disabled</Button>
+        <Button buttonType="error" state="default">Default</Button>
+        <Button buttonType="error" state="hover">Hover</Button>
+        <Button buttonType="error" state="clicked">Clicked</Button>
+        <Button buttonType="error" state="focus">Focus</Button>
+        <Button buttonType="error" state="disabled">Disabled</Button>
       </div>
     </div>
   ),
+};
+
+// Sub-Brands (Trip, Gold, SuperApp, Sell, Media, Logistics, Trading, Systems)
+export const SubBrandThemes: Story = {
+  render: () => {
+    const brands: Array<{ id: string; label: string }> = [
+      { id: 'trip', label: 'Trip (Cyan / Teal)' },
+      { id: 'gold', label: 'Gold (Amber / Ochre)' },
+      { id: 'superapp', label: 'SuperApp (Charcoal / Gray)' },
+      { id: 'sell', label: 'Sell (Coral / Orange)' },
+      { id: 'media', label: 'Media (Crimson / Magenta)' },
+      { id: 'logistics', label: 'Logistics (Green / Mint)' },
+      { id: 'trading', label: 'Trading (Navy / Indigo)' },
+      { id: 'systems', label: 'Systems (Lime / Olive)' },
+    ];
+
+    return (
+      <div className="flex flex-col gap-5">
+        {brands.map(({ id, label }) => (
+          <div key={id} data-brand={id} className="flex items-center gap-4 p-3 rounded-lg border border-neutral-200">
+            <span className="w-56 font-medium text-sm text-neutral-700">{label}</span>
+            <Button buttonType="brand" buttonStyle="fill">Fill</Button>
+            <Button buttonType="brand" buttonStyle="border">Border</Button>
+            <Button buttonType="brand" buttonStyle="link">Link</Button>
+            <Button buttonType="brand" size="sm" icon={<PlusIcon />} justIcon aria-label="Add" />
+          </div>
+        ))}
+      </div>
+    );
+  },
 };
 
 // Buttons with Icons (leading, trailing, both)
@@ -181,17 +214,79 @@ export const IconOnly: Story = {
   render: () => (
     <div className="flex flex-col gap-6">
       <div className="flex flex-wrap items-center gap-4">
-        <Button buttonType="brand" size="xxl" icon={<PlusIcon />} onlyIcon aria-label="Add XXL" />
-        <Button buttonType="brand" size="xl" icon={<PlusIcon />} onlyIcon aria-label="Add XL" />
-        <Button buttonType="brand" size="lg" icon={<PlusIcon />} onlyIcon aria-label="Add LG" />
-        <Button buttonType="brand" size="md" icon={<PlusIcon />} onlyIcon aria-label="Add MD" />
-        <Button buttonType="brand" size="sm" icon={<PlusIcon />} onlyIcon aria-label="Add SM" />
+        <Button buttonType="brand" size="xxl" icon={<PlusIcon />} justIcon aria-label="Add XXL" />
+        <Button buttonType="brand" size="xl" icon={<PlusIcon />} justIcon aria-label="Add XL" />
+        <Button buttonType="brand" size="lg" icon={<PlusIcon />} justIcon aria-label="Add LG" />
+        <Button buttonType="brand" size="md" icon={<PlusIcon />} justIcon aria-label="Add MD" />
+        <Button buttonType="brand" size="sm" icon={<PlusIcon />} justIcon aria-label="Add SM" />
       </div>
       <div className="flex flex-wrap items-center gap-4">
-        <Button buttonType="brand" buttonStyle="border" size="lg" icon={<CheckIcon />} onlyIcon aria-label="Confirm" />
-        <Button buttonType="error" buttonStyle="border" size="lg" icon={<TrashIcon />} onlyIcon aria-label="Delete" />
-        <Button buttonType="neutral" buttonStyle="border" size="lg" icon={<ArrowRightIcon />} onlyIcon aria-label="Next" />
+        <Button buttonType="brand" buttonStyle="border" size="lg" icon={<CheckIcon />} justIcon aria-label="Confirm" />
+        <Button buttonType="error" buttonStyle="border" size="lg" icon={<TrashIcon />} justIcon aria-label="Delete" />
+        <Button buttonType="neutral" buttonStyle="border" size="lg" icon={<ArrowRightIcon />} justIcon aria-label="Next" />
       </div>
     </div>
   ),
+};
+
+// Full DotOne Design System Matrix matching Figma specification
+export const DotOneMatrix: Story = {
+  render: () => {
+    const types: Array<'primary' | 'brand' | 'error' | 'neutral'> = ['primary', 'brand', 'error', 'neutral'];
+    const styles: Array<'fill' | 'border' | 'link'> = ['fill', 'border', 'link'];
+    const sizes: Array<'xxl' | 'xl' | 'lg' | 'md' | 'sm'> = ['xxl', 'xl', 'lg', 'md', 'sm'];
+    const states: Array<'default' | 'hover' | 'focus' | 'clicked' | 'disabled'> = ['default', 'hover', 'focus', 'clicked', 'disabled'];
+
+    return (
+      <div className="p-4 bg-white overflow-x-auto space-y-12">
+        <div>
+          <h2 className="text-xl font-bold text-neutral-900 mb-1">DotOne Button System Specification</h2>
+          <p className="text-sm text-neutral-500 mb-6">Complete matrix showing all types, styles, sizes, and interactive states.</p>
+        </div>
+
+        {sizes.map((size) => (
+          <div key={size} className="space-y-4 border-b border-neutral-100 pb-8">
+            <div className="flex items-center gap-3">
+              <span className="px-2.5 py-1 text-xs font-bold uppercase rounded-xs bg-neutral-900 text-white">Size: {size.toUpperCase()}</span>
+              <span className="text-xs text-neutral-400">
+                {size === 'xxl' && '56px height · 16px radius · 18px text'}
+                {size === 'xl' && '48px height · 16px radius · 16px text'}
+                {size === 'lg' && '40px height · 12px radius · 14px text'}
+                {size === 'md' && '32px height · 8px radius · 12px text'}
+                {size === 'sm' && '24px height · 8px radius · 10px text'}
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+              {types.map((t) => (
+                <div key={t} className="p-4 rounded-sm border border-neutral-200 bg-neutral-50/50 space-y-4">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-600 border-b border-neutral-200 pb-2">{t}</h4>
+                  
+                  {styles.map((s) => (
+                    <div key={s} className="space-y-2">
+                      <div className="text-[11px] font-medium text-neutral-400 uppercase tracking-wide">{s}</div>
+                      <div className="flex flex-wrap gap-2 items-center">
+                        {states.map((st) => (
+                          <Button
+                            key={st}
+                            buttonType={t}
+                            buttonStyle={s}
+                            size={size}
+                            state={st}
+                            icon={<CheckIcon />}
+                          >
+                            Button
+                          </Button>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  },
 };

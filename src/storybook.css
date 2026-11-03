@@ -1,11 +1,4 @@
 /* src/storybook.css */
-/* This file is purely for running Storybook locally */
 @import "tailwindcss";
 @import "./theme.css";
-
-/* We mock the brand color configuration here, simulating the consumer app's setup */
-@theme {
-  --color-brand-main: #0052CC;
-  --color-brand-light: #DEEBFF;
-  --color-brand-dark: #0747A6;
-}
+@import "./brands.css";
